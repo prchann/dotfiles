@@ -2,7 +2,7 @@
 call plug#begin()
   " UI and themes
   Plug 'Yggdroot/indentLine'
-  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle', 'branch': 'master' }
+  Plug 'scrooloose/nerdtree', { 'branch': 'master' }
   Plug 'ryanoasis/vim-devicons', { 'branch': 'master' }
   Plug 'sheerun/vim-polyglot'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
