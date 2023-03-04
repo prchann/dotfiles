@@ -51,3 +51,7 @@ files=(
     .gitconfig
 )
 REPLACE=false; copy_files "${files[@]}"
+
+# config docker
+# cp $FROM_BASE/docker/daemon.json /etc/docker/
+# sudo systemctl restart docker

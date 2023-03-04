@@ -1,0 +1,11 @@
+{
+  "debug": true,
+  "experimental": false,
+  "registry-mirrors": [
+    "https://mirror.ccs.tencentyun.com",
+    "https://kfrrwtli.mirror.aliyuncs.com",
+    "http://f1361db2.m.daocloud.io",
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://registry.docker-cn.com"
+  ]
+}
