@@ -1,0 +1,6 @@
+**/.dockerignore
+**/compose*
+**/Dockerfile*
+**/docker-compose*
+**/.git
+**/.ssh/id_rsa*

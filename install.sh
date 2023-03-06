@@ -14,7 +14,7 @@ fi
 REPO_PATH="$HOME/.dotfiles"
 FROM_BASE="$REPO_PATH/dotfiles"
 [ -d "$REPO_PATH" ] && rm -rf $REPO_PATH
-git clone -q --depth=1 git@github.com:prchann/dotfiles.git $REPO_PATH
+git clone -q --depth=1 https://github.com/prchann/dotfiles.git $REPO_PATH
 
 REPLACE=false
 function copy_files () {
@@ -55,3 +55,6 @@ REPLACE=false; copy_files "${files[@]}"
 # config docker
 # cp $FROM_BASE/docker/daemon.json /etc/docker/
 # sudo systemctl restart docker
+
+# clear
+rm -rf $REPO_PATH
