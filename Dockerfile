@@ -105,16 +105,8 @@ RUN /bin/bash -c '\
   '
 
 # install dotfiles
-# COPY install.sh ./install.sh
-# RUN cat ./install.sh | bash
- RUN curl -sL https://raw.githubusercontent.com/prchann/dotfiles/main/install.sh | bash
-
-# RUN curl -sL https://iterm2.com/shell_integration/zsh -o $HOME/.iterm2_shell_integration.zsh
-# RUN git clone -q --depth=1 https://github.com/prchann/dotfiles.git $HOME/.dotfiles && \
-#     cp -r $HOME/.dotfiles/dotfiles/. $HOME/ && \
-#     rm -rf $HOME/.dotfiles
+RUN curl -sL https://raw.githubusercontent.com/prchann/dotfiles/main/install.sh | bash
 COPY docker-entrypoint.sh ./
-# COPY .ssh/authorized_keys ./.ssh/
 
 # install neovim
 RUN apt-get -qq update && \
