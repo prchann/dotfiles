@@ -17,7 +17,7 @@ set incsearch                  " incremental search
 
 " using system clipboard
 if has('clipboard')
-  set  clipboard+=unnamedplus
+  set clipboard+=unnamedplus
 endif
 if has('mouse')
   set mouse=a
