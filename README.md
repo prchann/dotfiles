@@ -21,7 +21,7 @@ docker run --name ide -v /data:/data -p 2222:22 --restart=always -d prchann/ide
 ### Install
 
 ```shell
-curl -sL https://raw.githubusercontent.com/prchann/dotfiles/main/install.sh | bash
+curl -sL https://raw.githubusercontent.com/prchann/ide/main/install.sh | bash
 ```
 
 ## More
@@ -29,5 +29,5 @@ curl -sL https://raw.githubusercontent.com/prchann/dotfiles/main/install.sh | ba
 ### Init macOS
 
 ```shell
-curl -sL https://raw.githubusercontent.com/prchann/dotfiles/main/init-macos.sh | bash
+curl -sL https://raw.githubusercontent.com/prchann/ide/main/init-macos.sh | bash
 ```
