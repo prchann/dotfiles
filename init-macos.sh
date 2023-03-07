@@ -124,11 +124,11 @@ brew_install_casks "${formulaes[@]}"
 # work apps
 echo; echo "installing work apps..."
 casks=(
+  safari-technology-preview
+  google-chrome-dev
   wechat
   wechatwork
-  google-chrome
   tencent-meeting
-  firefox-developer-edition
   microsoft-office
 )
 brew_install_casks "${casks[@]}"
