@@ -56,7 +56,7 @@ plugins=(
 )
 command -v fzf >/dev/null && plugins+=(fzf)
 command -v tmux >/dev/null && plugins+=(tmux)
-[ -f /.dockerenv ] && ZSH_THEME="agnoster" || ZSH_THEME="simple"
+ZSH_THEME="agnoster" 
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -85,6 +85,8 @@ alias myip="curl cip.cc"
 
 
 # set prompt context to user name
-prompt_context() {
-  [[ $UID -ne 0 ]] && prompt_segment black default "$USER"
-}
+if [ -f "/.dockerenv" ]; then
+    prompt_context() {
+        [ $UID -ne 0 ] && prompt_segment black default "$USER"
+    }
+fi
