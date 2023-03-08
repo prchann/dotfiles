@@ -39,7 +39,7 @@ function nvimvenv {
   fi
 }
 
-alias vi=nvimvenv
+command -v nvim >/dev/null && alias vi=nvimvenv
 
 # omz
 plugins=(
