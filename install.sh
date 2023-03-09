@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 # config iterm2
 f=".iterm2_shell_integration.zsh"
