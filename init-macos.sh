@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # connect proxy server
 read -p "Proxy server is started? (Y/n): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
