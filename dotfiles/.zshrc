@@ -76,6 +76,18 @@ export MICRO_TRANSPORT="grpc"
 command -v exa >/dev/null && alias ls="exa"
 command -v batcat >/dev/null && alias bat="batcat"
 
+function psoa() {
+    ps aux | grep -i '[i]oa' | awk -v ORS=' ' '{print $2}'
+
+}
+function killoa() {
+    pids=($(ps aux | grep -i '[i]oa' | awk -v ORS=' ' '{print $2}'))
+    for pid in ${pids[@]}; do
+        sudo kill -9 $pid
+    done
+
+}
+
 alias ss='function _ss() { ssh -t $@ "tmux -CC new -A -s main" }; _ss'
 alias ch='function _ch() { curl "cht.sh/$1" }; _ch'
 
