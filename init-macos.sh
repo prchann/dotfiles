@@ -104,6 +104,10 @@ casks=(
   postman
 )
 brew_install_casks "${casks[@]}"
+formulaes=(
+  watch
+)
+brew_install_casks "${formulaes[@]}"
 
 echo; echo "installing more dev tools..."
 casks=(
