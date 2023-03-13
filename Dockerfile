@@ -205,6 +205,7 @@ RUN apt-get -qq update && \
         lsb-release \
         lsof \
         net-tools \
+        pandoc \
         silversearcher-ag \
         sudo \
         telnet \
