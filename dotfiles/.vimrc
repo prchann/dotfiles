@@ -76,16 +76,15 @@ if empty($TMUX) && has("nvim")
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " use tmux's 24-bit color support
 endif
 
-if !has("nvim")                     " italic comment
-  set t_ZH=[3m
-  set t_ZR=[23m
-  if has("termguicolors")
+" italic comment
+set t_ZH=[3m
+set t_ZR=[23m
+if has("termguicolors")
     highlight Comment gui=italic
     autocmd ColorScheme * hi Comment gui=italic
-  else
+else
     highlight Comment cterm=italic
     autocmd ColorScheme * hi Comment cterm=italic
-  endif
 endif
 
 " return to last edit position when opening files
