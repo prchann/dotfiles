@@ -32,14 +32,14 @@ RUN /bin/bash -c '\
   '
 
 # install jabba, java
-RUN curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash
-RUN /bin/bash -c '\
-  source ~/.jabba/jabba.sh && \
-  JAVA_VERSION=1.17.0 && \
-  jabba install openjdk@$JAVA_VERSION && \
-  jabba alias default openjdk@$JAVA_VERSION && \
-  jabba install openjdk-ri@1.8.41 \
-  '
+# RUN JABBA_VERSION=0.11.2 curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash
+# RUN /bin/bash -c '\
+#   source ~/.jabba/jabba.sh && \
+#   JAVA_VERSION=1.17.0 && \
+#   jabba install openjdk@$JAVA_VERSION && \
+#   jabba alias default openjdk@$JAVA_VERSION && \
+#   jabba install openjdk-ri@1.8.41 \
+#   '
 
 # install pyenv, python
 RUN curl -sL https://pyenv.run | bash

@@ -15,8 +15,8 @@ GVM_PATH=~/.gvm/scripts/gvm
 [ -s $GVM_PATH ] && source $GVM_PATH
 
 # jabba
-JABBA_PATH=~/.jabba/jabba.sh
-[ -f $JABBA_PATH ] && source $JABBA_PATH
+# JABBA_PATH=~/.jabba/jabba.sh
+# [ -f $JABBA_PATH ] && source $JABBA_PATH
 
 # pyenv
 PYENV_ROOT=~/.pyenv
