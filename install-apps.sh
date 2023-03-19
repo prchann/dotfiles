@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # connect proxy server
-read -p "Proxy server is started? (Y/n): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+read -p "Is proxy server started? (Y/n): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 echo;
-export http_proxy=http://127.0.0.1:1087; export https_proxy=http://127.0.0.1:1087;
 
 # check zsh
 if ! command -v zsh &> /dev/null; then
@@ -34,6 +33,11 @@ if [ -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]; then
 else
   git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
   echo "OK"
+fi
+
+# if running on linux, exit
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  exit
 fi
 
 # install homebrew
