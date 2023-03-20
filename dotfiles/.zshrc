@@ -88,10 +88,10 @@ function killoa() {
 
 }
 
-alias ss='function _ss() { ssh -t $@ "tmux -CC new -A -s main" }; _ss'
-alias ch='function _ch() { curl "cht.sh/$1" }; _ch'
+alias ss='function _f() { ssh -t $@ "tmux -CC new -A -s main" }; _f'
+alias ch='function _f() { curl "cht.sh/$1" }; _f'
 
-alias proxy='function _proxy() { export http_proxy=http://127.0.0.1:1087; export https_proxy=http://127.0.0.1:1087; [ -f /.dockerenv ] && export http_proxy=http://host.docker.internal:1087; [ -f /.dockerenv ] && export https_proxy=http://host.docker.internal:1087 }; _proxy'
+alias proxy='function _f() { export http_proxy=http://127.0.0.1:1087; export https_proxy=http://127.0.0.1:1087; [ -f /.dockerenv ] && export http_proxy=http://host.docker.internal:1087; [ -f /.dockerenv ] && export https_proxy=http://host.docker.internal:1087 }; _f'
 alias unproxy="unset http_proxy; unset https_proxy"
 alias myip="curl cip.cc"
 
