@@ -201,9 +201,11 @@ RUN apt-get -qq update && \
         exa \
         fzf \
         iputils-ping \
+        iredis \
         jq \
         lsb-release \
         lsof \
+        mycli \
         net-tools \
         pandoc \
         silversearcher-ag \
