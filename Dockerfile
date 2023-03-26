@@ -93,8 +93,8 @@ RUN /bin/bash -c '\
   source ~/.gvm/scripts/gvm && \
   gvm install go1.17.13 -B && \
   gvm use go1.17.13 && \
-  gvm install go1.20.1 && \
-  gvm use go1.20.1 --default \
+  gvm install go1.20.2 && \
+  gvm use go1.20.2 --default \
   '
 
 # install grpc
@@ -105,7 +105,7 @@ RUN /bin/bash -c '\
   '
 
 # install dotfiles
-RUN curl -sL https://raw.githubusercontent.com/prchann/dotfiles/main/install.sh | bash
+RUN curl -sL https://raw.githubusercontent.com/prchann/dotfiles/main/install-dotfiles.sh | bash
 COPY docker-entrypoint.sh ./
 
 # install neovim
