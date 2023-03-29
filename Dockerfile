@@ -116,8 +116,9 @@ RUN /bin/bash -c '\
   export PATH="~/.pyenv/bin:$PATH" && \
   eval "$(pyenv init -)" && \
   pip install \
-      pynvim \
+      autopep8 \
       pylint \
+      pynvim \
   '
 RUN /bin/bash -c '\
   source ~/.nvm/nvm.sh && \
