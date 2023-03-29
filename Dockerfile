@@ -115,7 +115,9 @@ RUN apt-get -qq update && \
 RUN /bin/bash -c '\
   export PATH="~/.pyenv/bin:$PATH" && \
   eval "$(pyenv init -)" && \
-  pip install pynvim \
+  pip install \
+      pynvim \
+      pylint \
   '
 RUN /bin/bash -c '\
   source ~/.nvm/nvm.sh && \
@@ -162,9 +164,9 @@ RUN /bin/bash -c '\
     coc-go \
     coc-html \
     coc-java \
-    coc-jedi \
     coc-json \
     coc-prettier \
+    coc-pyright \
     coc-sh \
     coc-sql \
     coc-tsserver \

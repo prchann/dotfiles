@@ -39,6 +39,7 @@ function copy_files () {
 # cp dotfiles: replace if exist
 declare -a files=(
     .config/nvim/init.vim
+    .config/nvim/coc-settings.json
     .tmux.conf
     .vimrc
     .zshrc
