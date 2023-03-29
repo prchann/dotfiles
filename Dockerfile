@@ -64,10 +64,8 @@ RUN apt-get -qq update && \
 RUN /bin/bash -c '\
   export PATH="~/.pyenv/bin:$PATH" && \
   eval "$(pyenv init -)" && \
-  PYTHON_VERSION=3.11.1 && \
-  pyenv install $PYTHON_VERSION && \
-  pyenv global $PYTHON_VERSION && \
-  pyenv virtualenv $PYTHON_VERSION v$PYTHON_VERSION \
+  pyenv install 3.11.1 && \
+  pyenv global 3.11.1 \
   '
 
 # install nvm, node.js
@@ -117,8 +115,6 @@ RUN apt-get -qq update && \
 RUN /bin/bash -c '\
   export PATH="~/.pyenv/bin:$PATH" && \
   eval "$(pyenv init -)" && \
-  pip install pynvim && \
-  pyenv activate v3.11.1 && \
   pip install pynvim \
   '
 RUN /bin/bash -c '\
