@@ -90,6 +90,11 @@ function killoa() {
 
 alias ss='function _f() { ssh -t $@ "tmux -CC new -A -s main" }; _f'
 alias ch='function _f() { curl "cht.sh/$1" }; _f'
+# gen a password
+function genpwd() {
+    [ -z "$1" ] && LEN=16 || LEN=$1;
+    tr -dc 'A-Za-z0-9!#$%&()*+,-./:;<=>?@[\]^_`{|}~' </dev/urandom | head -c $LEN; echo
+}
 
 alias proxy='function _f() { export http_proxy=http://127.0.0.1:1087; export https_proxy=http://127.0.0.1:1087; [ -f /.dockerenv ] && export http_proxy=http://host.docker.internal:1087; [ -f /.dockerenv ] && export https_proxy=http://host.docker.internal:1087 }; _f'
 alias unproxy="unset http_proxy; unset https_proxy"
