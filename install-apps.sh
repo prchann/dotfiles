@@ -88,7 +88,7 @@ echo; echo "installing system tools..."
 casks=(
   adrive
   rectangle
-  jietu
+  shottr
   karabiner-elements
   monitorcontrol
   the-unarchiver
