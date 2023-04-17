@@ -1,12 +1,18 @@
 #!/bin/bash
 
-# connect proxy server
-read -p "Is proxy server started? (Y/n): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
-echo;
-
 # check zsh
 if ! command -v zsh &> /dev/null; then
-  echo "can not found zsh, please install it at first"
+  echo "zsh can not found. please install it at first"
+  exit 1
+fi
+# check curl
+if ! command -v curl &> /dev/null; then
+  echo "curl can not found. please install it at first"
+  exit 1
+fi
+# check git
+if ! command -v git &> /dev/null; then
+  echo "git can not found. please install it at first"
   exit 1
 fi
 
@@ -23,7 +29,8 @@ echo -n "installing zsh-autosuggestions: "
 if [ -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
   echo "skip"
 else
-  git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions \
+    ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   echo "OK"
 fi
 
@@ -31,11 +38,12 @@ echo -n "installing zsh-syntax-highlighting: "
 if [ -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]; then
   echo "skip"
 else
-  git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+  git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git \
+    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
   echo "OK"
 fi
 
-# if running on linux, exit
+# if running on linux, exit now
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   exit
 fi
