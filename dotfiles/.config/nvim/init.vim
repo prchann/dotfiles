@@ -8,6 +8,7 @@ call plug#begin()
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'lifepillar/vim-solarized8'
   Plug 'morhetz/gruvbox'
 
   " tools
@@ -69,18 +70,19 @@ nnoremap yot :TagbarToggle<CR>
 
 " colorscheme
 " solarized
-" colorscheme default
-" let g:airline_solarized_bg="dark"
-" let g:airline_theme="solarized"
+let g:solarized_extra_hi_groups=1
+colorscheme solarized8
+let g:airline_solarized_bg="dark"
+let g:airline_theme="solarized"
 " gruvbox
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_contrast_light='soft'
-let g:gruvbox_invert_selection=0
-let g:gruvbox_sign_column='bg0'
-let g:gruvbox_invert_signs=0
-let g:gruvbox_invert_indent_guides=1
-colorscheme gruvbox
-let g:airline_theme="gruvbox"
+" let g:gruvbox_contrast_dark='hard'
+" let g:gruvbox_contrast_light='soft'
+" let g:gruvbox_invert_selection=0
+" let g:gruvbox_sign_column='bg0'
+" let g:gruvbox_invert_signs=0
+" let g:gruvbox_invert_indent_guides=1
+" colorscheme gruvbox
+" let g:airline_theme="gruvbox"
 
 
 " airline
