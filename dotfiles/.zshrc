@@ -75,6 +75,7 @@ export MICRO_TRANSPORT="grpc"
 # alias
 command -v exa >/dev/null && alias ls="exa"
 command -v batcat >/dev/null && alias bat="batcat"
+alias activate='source .venv/bin/activate'
 
 function psoa() {
     ps aux | grep -i '[i]oa' | awk -v ORS=' ' '{print $2}'
