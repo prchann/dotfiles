@@ -85,7 +85,7 @@ function brew_install () {
 echo; echo "installing fonts..."
 brew tap homebrew/cask-fonts
 casks=(
-  font-jetbrains-mono
+  font-jetbrains-mono-nerd-font
   font-noto-nerd-font
 )
 brew_install_casks "${casks[@]}"
