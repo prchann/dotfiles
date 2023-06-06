@@ -69,11 +69,20 @@ nnoremap yot :TagbarToggle<CR>
 
 
 " colorscheme
-" solarized
+
+" solarized dark
 " let g:solarized_extra_hi_groups=1
 " colorscheme solarized8
 " let g:airline_solarized_bg="dark"
 " let g:airline_theme="solarized"
+
+" solarized light
+" set bg="light"
+" let g:solarized_extra_hi_groups=1
+" colorscheme solarized8
+" let g:airline_solarized_bg="light"
+" let g:airline_theme="solarized"
+
 " gruvbox
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_contrast_light='soft'
@@ -126,7 +135,10 @@ let g:startify_lists=[
 " tagbar
 let g:tagbar_autofocus=0
 let g:tagbar_autoclose=0
-let g:tagbar_indent=1
+" let g:tagbar_indent=2
+let g:tagbar_show_linenumbers=-1
+let g:tagbar_show_tag_linenumbers=1
+let g:tagbar_show_data_type=1
 let g:tagbar_type_go={
   \ 'ctagstype' : 'go',
   \ 'kinds'     : [
