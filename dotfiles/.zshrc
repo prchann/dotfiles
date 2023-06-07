@@ -97,6 +97,7 @@ function genpwd() {
 }
 
 alias proxy='function _f() { export http_proxy=http://127.0.0.1:1087; export https_proxy=http://127.0.0.1:1087; [ -f /.dockerenv ] && export http_proxy=http://host.docker.internal:1087; [ -f /.dockerenv ] && export https_proxy=http://host.docker.internal:1087 }; _f'
+alias ioa_proxy='export http_proxy=http://127.0.0.1:12639; export https_proxy=http://127.0.0.1:12639;'
 alias unproxy="unset http_proxy; unset https_proxy"
 alias myip="curl cip.cc"
 
