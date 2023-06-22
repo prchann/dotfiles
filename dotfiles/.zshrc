@@ -56,7 +56,7 @@ plugins=(
 )
 command -v fzf >/dev/null && plugins+=(fzf)
 command -v tmux >/dev/null && plugins+=(tmux)
-ZSH_THEME="agnoster" 
+ZSH_THEME="murilasso" 
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
