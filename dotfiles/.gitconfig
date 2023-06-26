@@ -1,4 +1,6 @@
 [color]
     ui = auto
+[core]
+    quotepath = off
 [init]
     defaultBranch = main
