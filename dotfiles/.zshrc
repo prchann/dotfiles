@@ -40,6 +40,9 @@ function nvimvenv {
 }
 
 command -v nvim >/dev/null && alias vi=nvimvenv
+command -v vi >/dev/null && export EDITOR=vi
+command -v vim >/dev/null && export EDITOR=vim
+command -v nvim >/dev/null && export EDITOR=nvim
 
 # omz
 plugins=(
@@ -56,7 +59,7 @@ plugins=(
 )
 command -v fzf >/dev/null && plugins+=(fzf)
 command -v tmux >/dev/null && plugins+=(tmux)
-ZSH_THEME="murilasso" 
+ZSH_THEME="ys" 
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -108,3 +111,4 @@ if [ -f "/.dockerenv" ]; then
         [ $UID -ne 0 ] && prompt_segment black default "$USER"
     }
 fi
+

@@ -7,13 +7,13 @@ My dotfiles and ide docker image.
 ### Install Apps
 
 ```shell
-bash <(curl -sL https://raw.githubusercontent.com/prchann/ide/main/install-apps.sh)
+bash <(curl -sL https://raw.githubusercontent.com/prchann/dotfiles/main/install-apps.sh)
 ```
 
 ### Install Dotfiles
 
 ```shell
-bash <(curl -sL https://raw.githubusercontent.com/prchann/ide/main/install-dotfiles.sh)
+bash <(curl -sL https://raw.githubusercontent.com/prchann/dotfiles/main/install-dotfiles.sh)
 ```
 
 ## IDE Docker Image
