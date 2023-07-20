@@ -71,6 +71,9 @@ M.nvimtree = {
       },
     },
   },
+	update_focused_file = {
+		enable = false,
+	},
 }
 
 return M

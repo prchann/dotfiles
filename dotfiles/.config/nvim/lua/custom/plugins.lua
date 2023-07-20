@@ -36,6 +36,9 @@ local plugins = {
 	{
 		"nvim-tree/nvim-tree.lua",
 		opts = overrides.nvimtree,
+    keys = {
+      { "<Leader>E", "<cmd>NvimTreeFindFile<CR>", desc = "Find current file in NvimTree" },
+    }
 	},
 
 	-- Install a plugin
@@ -65,7 +68,7 @@ local plugins = {
     "APZelos/blamer.nvim",
 		event = "VeryLazy",
     keys = {
-      { "yob", "<cmd>BlamerToggle<cr>", desc = "Toggle Git Blamer"},
+      { "yob", "<cmd>BlamerToggle<CR>", desc = "Toggle Git Blamer"},
     },
     init = function()
       vim.g.blamer_delay=700
@@ -91,7 +94,7 @@ local plugins = {
 		-- lazy = false;
 		event = "VeryLazy",
 		keys = {
-			{ "<C-t>", "<cmd>TagbarToggle<cr>", desc = "Toggle Tag Bar" },
+			{ "<C-t>", "<cmd>TagbarToggle<CR>", desc = "Toggle Tag Bar" },
 		},
 		init = function()
 			vim.g.startuptime_tries = 10
