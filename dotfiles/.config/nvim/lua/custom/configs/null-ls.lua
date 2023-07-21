@@ -22,6 +22,9 @@ local sources = {
   b.formatting.gofmt,
   b.formatting.goimports,
   b.diagnostics.golangci_lint,
+
+  -- sql
+  b.formatting.sql_formatter,
 }
 
 null_ls.setup {

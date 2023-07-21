@@ -53,6 +53,10 @@ M.mason = {
     "gopls" ,
     "goimports",
     "golangci-lint",
+
+    -- sql
+    "sqlls",
+    "sql-formatter"
   },
 }
 
