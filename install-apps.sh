@@ -36,6 +36,7 @@ install_basic_pkgs() {
     cron
     curl
     exa
+    fd-find
     fzf
     gcc
     git
@@ -48,6 +49,7 @@ install_basic_pkgs() {
     mycli
     net-tools
     pandoc
+    ripgrep
     silversearcher-ag
     sudo
     tar
