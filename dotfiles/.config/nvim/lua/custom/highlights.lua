@@ -9,6 +9,9 @@ M.override = {
   Comment = {
     italic = true,
   },
+  CursorLine = {
+    bg = "statusline_bg"
+  }
 }
 
 ---@type HLTable
