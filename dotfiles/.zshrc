@@ -73,6 +73,8 @@ export ETCD_USERNAME=
 export ETCD_PASSWORD=
 export MICRO_REGISTRY_ADDRESS="etcd:2379"
 export MICRO_TRANSPORT="grpc"
+export MICRO_CLIENT="grpc"
+export MICRO_SERVER="grpc"
 
 
 # alias
