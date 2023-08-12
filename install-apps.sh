@@ -229,6 +229,12 @@ function install_nvchad() {
   fi
 }
 
+# install nvim lazy plugins
+function install_nvim_lazy_plugins() {
+  log "installing nvim lazy plugins"
+  go install github.com/jstemmer/gotags@master
+}
+
 # install nvim
 function install_nvim_v1() {
   log "installing nvim"

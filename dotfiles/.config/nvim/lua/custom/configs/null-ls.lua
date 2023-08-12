@@ -23,6 +23,10 @@ local sources = {
 		},
 	}),
 
+  -- yaml
+  b.formatting.yamlfmt,
+  b.diagnostics.yamllint,
+
 	-- go
 	b.formatting.gofmt,
 	b.formatting.goimports,
