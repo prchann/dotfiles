@@ -59,10 +59,11 @@ install_basic_pkgs() {
     unzip
     zip
   )
-  for pkg in "${pkgs[@]}"; do
-    log "* installing $pkg"
-    apt-get -qq -y install "$pkg"
-  done
+  apt-get -qq -y install ${pkgs[@]}
+  # for pkg in "${pkgs[@]}"; do
+  #   log "* installing $pkg"
+  #   apt-get -qq -y install "$pkg"
+  # done
 }
 
 # install sshd
@@ -112,8 +113,8 @@ function install_go() {
   log "installing go"
   log "* installing gvm"
   if [ ! -d "$HOME/.gvm" ]; then
+    apt-get -qq -y install bison bsdmainutils
     curl -sL https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer | bash
-    apt-get -qq -y install bison
   else
     warn "* installing gvm: skip"
   fi
@@ -122,8 +123,8 @@ function install_go() {
   source ~/.gvm/scripts/gvm && \
     gvm install go1.18.10 -B && \
     gvm use go1.18.10 && \
-    gvm install go1.20.5 && \
-    gvm use go1.20.5 --default
+    gvm install go1.21.0 && \
+    gvm use go1.21.0 --default
 
   # install grpc
   log "* installing grpc"
