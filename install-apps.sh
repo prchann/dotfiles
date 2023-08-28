@@ -317,17 +317,17 @@ function install_github_cli() {
       apt-get -qq -y install gh
 }
 
-apt-get -qq -y update
-install_basic_pkgs
-set_lang
-install_sshd
-install_zsh
+# apt-get -qq -y update
+# install_basic_pkgs
+# set_lang
+# install_sshd
+# install_zsh
 install_go
-install_nodejs
-install_python
-install_nvim
-install_nvchad
-install_github_cli
+# install_nodejs
+# install_python
+# install_nvim
+# install_nvchad
+# install_github_cli
 # exit now if running on linux
 [ "$OSTYPE"=="linux-gnu"* ] && exit
 
