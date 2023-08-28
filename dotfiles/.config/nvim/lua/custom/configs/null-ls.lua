@@ -38,6 +38,9 @@ local sources = {
 
 	-- sql
 	b.formatting.sql_formatter,
+
+  -- docker
+  b.diagnostics.hadolint,
 }
 
 null_ls.setup({
