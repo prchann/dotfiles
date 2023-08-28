@@ -101,10 +101,30 @@ function genpwd() {
     tr -dc 'A-Za-z0-9!#$%&()*+,-./:;<=>?@[\]^_`{|}~' </dev/urandom | head -c $LEN; echo
 }
 
-alias proxy='function _f() { export http_proxy=http://127.0.0.1:1087; export https_proxy=http://127.0.0.1:1087; [ -f /.dockerenv ] && export http_proxy=http://host.docker.internal:1087; [ -f /.dockerenv ] && export https_proxy=http://host.docker.internal:1087 }; _f'
-alias ioa_proxy='export http_proxy=http://127.0.0.1:12639; export https_proxy=http://127.0.0.1:12639;'
-alias unproxy="unset http_proxy; unset https_proxy"
-alias myip="curl cip.cc"
+function proxy() {
+  export http_proxy="http://127.0.0.1:1087"
+  export https_proxy="http://127.0.0.1:1087"
+
+  # set proxy in container
+  if [ -f "/.dockerenv" ]; then
+    export http_proxy="http://host.docker.internal:1087"
+    export https_proxy="http://host.docker.internal:1087" 
+  fi
+}
+
+proxy
+
+function ioaproxy() {
+  export http_proxy="http://127.0.0.1:12639"
+  export https_proxy="http://127.0.0.1:12639"
+}
+
+function unproxy() {
+  unset http_proxy
+  unset https_proxy
+}
+
+alias ip="curl cip.cc"
 
 
 # set prompt context to user name
