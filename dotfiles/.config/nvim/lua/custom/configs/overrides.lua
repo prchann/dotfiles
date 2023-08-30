@@ -50,13 +50,13 @@ M.mason = {
     "pyright",
 
     -- go
-    "gopls" ,
+    "gopls",
     "goimports",
     "golangci-lint",
 
     -- sql
     "sqlls",
-    "sql-formatter"
+    "sql-formatter",
   },
 }
 

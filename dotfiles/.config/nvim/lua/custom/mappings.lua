@@ -17,6 +17,21 @@ M.general = {
 	},
 }
 
--- more keybinds!
+M.gitsigns = {
+	n = {
+		["<leader>gb"] = {
+			function()
+				package.loaded.gitsigns.toggle_current_line_blame()
+			end,
+			"Blame line",
+		},
+		["<leader>sh"] = {
+			function()
+				package.loaded.gitsigns.stage_hunk()
+			end,
+			"Blame line",
+		},
+	},
+}
 
 return M
