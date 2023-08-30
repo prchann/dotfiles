@@ -112,8 +112,6 @@ function proxy() {
   fi
 }
 
-proxy
-
 function ioaproxy() {
   export http_proxy="http://127.0.0.1:12639"
   export https_proxy="http://127.0.0.1:12639"
