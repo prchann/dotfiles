@@ -124,27 +124,34 @@ local plugins = {
 			"ray-x/guihua.lua",
 			"neovim/nvim-lspconfig",
 			"nvim-treesitter/nvim-treesitter",
+			"theHamsta/nvim-dap-virtual-text",
+			"mfussenegger/nvim-dap",
+			"rcarriga/nvim-dap-ui",
 		},
 		config = function()
 			require("go").setup()
 		end,
-		event = {"CmdlineEnter"},
-		ft = {"go", 'gomod'},
-		build = ':lua require("go.install").update_all_sync()'
+		event = { "CmdlineEnter" },
+		ft = { "go", "gomod" },
+		build = ':lua require("go.install").update_all_sync()',
+		keys = {
+			{ "<Leader>ie", "<cmd>GoIfErr<CR>", desc = "Insert if err" },
+			{ "<Leader>cmt", "<cmd>GoCmt<CR>", desc = "Insert comments" },
+		},
 	},
 
-  {
-    -- highlighting other uses of the word under the cursor
-    "RRethy/vim-illuminate",
-    lazy = false,
-    config = function()
-      require('illuminate').configure({
-        under_cursor = false,
-        -- min_count_to_highlight = 2,
-      })
-    end,
-  }
-
+	{
+		-- highlighting other uses of the word under the cursor
+		"RRethy/vim-illuminate",
+		lazy = false,
+		config = function()
+			require("illuminate").configure({
+				under_cursor = false,
+				-- min_count_to_highlight = 2,
+				filetypes_denylist = { "NvimTree" },
+			})
+		end,
+	},
 }
 
 return plugins
